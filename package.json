@@ -1,6 +1,6 @@
 {
   "name": "rentx",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -33,8 +33,13 @@
     "@vitejs/plugin-react": "^3.0.0",
     "commitizen": "^4.2.6",
     "cz-conventional-changelog": "3.3.0",
-    "eslint": "^8.30.0",
+    "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-config-semistandard": "^17.0.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
     "husky": "^8.0.2",
     "prettier": "^2.8.1",
     "typescript": "^4.9.3",
@@ -44,5 +49,10 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "description": "web app for the purpose of renting cars",
+  "main": "App.tsx",
+  "repository": "https://github.com/iamgabrieldev/rentX-web.git",
+  "author": "Gabriel Oliveira <gabriellfernandoo@gmail.com>",
+  "license": "MIT"
 }
