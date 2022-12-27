@@ -6,9 +6,7 @@ import {
   useState,
 } from "react";
 import { ThemeProvider } from "styled-components";
-import { dark } from "../../styles/themes/dark";
-import { light } from "../../styles/themes/light";
-import selectTheme from "../../../app/styles/themes/default/default";
+import selectTheme from "../../styles/themes";
 
 interface ThemeContextData {
   toggleTheme: () => void;
@@ -24,7 +22,7 @@ export const ThemeContext = createContext({} as ThemeContextData);
 export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
   const [theme, setTheme] = useState<"light" | "dark">(() => {
     const storageTheme = JSON.parse(
-      localStorage.getItem("@ignite-timer:theme-1.0.0")!
+      localStorage.getItem("theme")!
     );
 
     if (storageTheme && storageTheme === "dark") {
@@ -42,12 +40,12 @@ export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
   }
 
   useEffect(() => {
-    localStorage.setItem("@ignite-timer:theme-1.0.0", JSON.stringify(theme));
+    localStorage.setItem("theme", JSON.stringify(theme));
   }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ toggleTheme, isDarkTheme }}>
-      <ThemeProvider theme={selectTheme("dark")}>{children}</ThemeProvider>
+      <ThemeProvider theme={selectTheme(theme)}>{children}</ThemeProvider>
     </ThemeContext.Provider>
   );
 }

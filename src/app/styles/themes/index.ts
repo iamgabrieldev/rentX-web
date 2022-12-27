@@ -1,14 +1,14 @@
 import { DefaultTheme } from "styled-components";
 import merge from "deepmerge";
 
-import { dark } from "../dark";
-import { light } from "../light";
+import { dark } from "./dark";
+import { light } from "./light";
 
-const selectTheme = (theme: string): DefaultTheme => {
+const selectTheme = (theme: "light" | "dark"): DefaultTheme => {
   let selectedTheme;
 
   switch (theme.toLowerCase()) {
-    case "ligth":
+    case "light":
       selectedTheme = light();
       break;
 
@@ -23,7 +23,8 @@ const selectTheme = (theme: string): DefaultTheme => {
     __options: any
   ) => sourceArray;
 
-  return merge(dark(), selectedTheme, {
+  // TODO: Tipar corretamente
+  return merge<any>(dark(), selectedTheme, {
     arrayMerge: overwriteMerge,
   });
 };
