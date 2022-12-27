@@ -1,4 +1,4 @@
-export const ligth = () => ({
+export const light = () => ({
   colors: {
     background: "#f7f7f7",
     neutral: {

@@ -1,5 +1,12 @@
+import { useTheme } from "styled-components";
+import * as Styled from "./styles";
+
 const Home: React.FC = () => {
-  return <h1>Home</h1>;
+  return (
+    <Styled.Container>
+      <div>teste</div>
+    </Styled.Container>
+  );
 };
 
 export default Home;

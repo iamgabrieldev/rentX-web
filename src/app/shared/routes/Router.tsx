@@ -1,10 +1,13 @@
-import Home from "@/app/pages/Home";
+import { FC } from "react";
 import { Routes, Route } from "react-router-dom";
+import { Home } from "../../pages";
 
-const Router: React.FC = () => {
+const AppRouter: FC = () => {
   return (
-    <Routes path="/" element={<DefaultLayout />}>
-      <Route element={<Home />}/>
     <Routes>
-  )
-}
+      <Route path="/" element={<Home />} />
+    </Routes>
+  );
+};
+
+export default AppRouter;
