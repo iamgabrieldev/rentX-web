@@ -1,13 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import { ThemeContextProvider } from "./app/shared/context/ThemeContext";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import { ThemeContextProvider } from './context/ThemeContext'
 
 // router
-import AppRouter from "./app/shared/routes/Router";
-import GlobalStyles from "./app/styles/globalStyles";
+import AppRouter from './routes/Router'
+import GlobalStyles from './styles/globalStyles'
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeContextProvider>
@@ -15,5 +15,5 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         <AppRouter />
       </ThemeContextProvider>
     </BrowserRouter>
-  </React.StrictMode>
-);
+  </React.StrictMode>,
+)
