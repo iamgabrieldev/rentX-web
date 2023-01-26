@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": false,
@@ -14,22 +18,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "paths": {
-      "@/*": ["./src/*"],
-      "@/app/*": ["./src/app"],
-      "@/app/layout/*": ["./src/app/layout"],
-      "@/app/pages/*": ["./src/app/pages"],
-      "@/shared/*": ["./src/shared"],
-      "@/shared/components/*": ["./src/shared/components"],
-      "@/shared/hooks/*": ["./src/shared/hooks"],
-      "@/shared/context/*": ["./src/shared/context"],
-      "@/shared/routes/*": ["./src/shared/routes"],
-      "@/shared/services/*": ["./src/shared/services"]
-    },
     "jsx": "react-jsx"
   },
-  "include": ["src"],
-  "files": ["src/app/@types/styled.d.ts"],
+  "include": [
+    "src"
+  ],
+  "files": [
+    "src/@types/styled.d.ts"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"
