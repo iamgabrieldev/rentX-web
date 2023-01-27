@@ -1,6 +1,6 @@
 export const light = () => ({
   colors: {
-    background: "#f7f7f7",
+    background: "#1B1B1F",
     neutral: {
       pure: "#ffffff",
       1: "#efeff1",
