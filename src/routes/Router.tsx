@@ -1,13 +1,14 @@
 import { FC } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { Home } from '../pages'
+import { CarList, Home } from '../pages'
 
-const AppRouter: FC = () => {
+const Router: FC = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/listagem" element={<CarList />} />
     </Routes>
   )
 }
 
-export default AppRouter
+export default Router

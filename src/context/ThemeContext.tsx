@@ -1,57 +1,49 @@
-import {
-  createContext,
-  ReactNode,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
-import { ThemeProvider } from "styled-components";
-import selectTheme from "../../styles/themes";
+import { createContext, ReactNode, useContext, useEffect, useState } from 'react'
+import { ThemeProvider } from 'styled-components'
+import selectTheme from '../styles/themes'
 
 interface ThemeContextData {
-  toggleTheme: () => void;
-  isDarkTheme: boolean;
+  toggleTheme: () => void
+  isDarkTheme: boolean
 }
 
 interface ThemeContextProviderProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
-export const ThemeContext = createContext({} as ThemeContextData);
+export const ThemeContext = createContext({} as ThemeContextData)
 
 export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState<"light" | "dark">(() => {
-    const storageTheme = JSON.parse(
-      localStorage.getItem("theme")!
-    );
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    const storageTheme = JSON.parse(localStorage.getItem('theme')!)
 
-    if (storageTheme && storageTheme === "dark") {
-      return "dark";
+    if (storageTheme && storageTheme === 'dark') {
+      return 'dark'
     } else {
-      return "light";
+      return 'light'
     }
-  });
+  })
 
-  const isDarkTheme = theme === "dark";
+  const isDarkTheme = theme === 'dark'
 
   function toggleTheme() {
-    const updatedTheme = theme === "light" ? "dark" : "light";
-    setTheme(updatedTheme);
+    const updatedTheme = theme === 'light' ? 'dark' : 'light'
+    setTheme(updatedTheme)
   }
 
   useEffect(() => {
-    localStorage.setItem("theme", JSON.stringify(theme));
-  }, [theme]);
+    localStorage.setItem('theme', JSON.stringify(theme))
+  }, [theme])
 
   return (
     <ThemeContext.Provider value={{ toggleTheme, isDarkTheme }}>
       <ThemeProvider theme={selectTheme(theme)}>{children}</ThemeProvider>
     </ThemeContext.Provider>
-  );
+  )
 }
 
 export function useThemeContext() {
-  const context = useContext(ThemeContext);
+  const context = useContext(ThemeContext)
 
-  return context;
+  return context
 }
