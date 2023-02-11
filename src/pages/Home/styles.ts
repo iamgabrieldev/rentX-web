@@ -2,7 +2,7 @@ import { Row } from 'antd'
 import styled from 'styled-components'
 
 export const RowStyled = styled(Row)`
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: #1b1b1b;
   height: 100vh;
   justify-content: space-evenly;
   display: flex;

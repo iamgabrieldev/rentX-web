@@ -30,10 +30,12 @@ const GlobalStyles = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
   #nprogress .bar {
-    background: ${({ theme }) => theme.colors.primary};
+    background: ${({ theme }) => theme.colors.light.pure};
   }
 
   #nprogress .spinner-icon {

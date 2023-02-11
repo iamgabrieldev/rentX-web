@@ -1,0 +1,52 @@
+{
+  "car": [
+    {
+      "id": 1,
+      "name": "RS 5 Coupe",
+      "model": "Audi",
+      "price": 150,
+      "urlImage": "https://raw.githubusercontent.com/iamgabrieldev/rentX-images/main/Audi.png",
+      "icon": "energy"
+    },
+    {
+      "id": 2,
+      "name": "Corvette Z06",
+      "model": "Chevrolet",
+      "price": 1200,
+      "urlImage": "https://raw.githubusercontent.com/iamgabrieldev/rentX-images/main/Corvete%20Z06.png",
+      "icon": "gasoline"
+    },
+    {
+      "id": 3,
+      "name": "Panamera",
+      "model": "Porche",
+      "price": 340,
+      "urlImage": "https://raw.githubusercontent.com/iamgabrieldev/rentX-images/main/Porche.png",
+      "icon": "energy"
+    },
+    {
+      "id": 4,
+      "name": "Huracan",
+      "model": "Lamborghini",
+      "price": 3600,
+      "urlImage": "https://raw.githubusercontent.com/iamgabrieldev/rentX-images/main/Lambo.png",
+      "icon": "gasoline"
+    },
+    {
+      "id": 5,
+      "name": "XC40",
+      "model": "Volvo",
+      "price": 1200,
+      "urlImage": "https://raw.githubusercontent.com/iamgabrieldev/rentX-images/main/Volvo.png",
+      "icon": "nature"
+    },
+    {
+      "id": 6,
+      "name": "Lancer Evo X",
+      "model": "Audi",
+      "price": 820,
+      "urlImage": "https://raw.githubusercontent.com/iamgabrieldev/rentX-images/main/Lancer.png",
+      "icon": "gasoline"
+    }
+  ]
+}
