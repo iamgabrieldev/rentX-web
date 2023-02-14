@@ -1,10 +1,8 @@
 import styled from 'styled-components'
 
 export const CarListStyled = styled.main`
-  height: 100%;
-  width: 100vw;
+  height: calc(100vh - 302px);
   padding: 1rem 12.25rem 1rem 7.25rem;
-  background: ${({ theme }) => theme.colors.background};
 
   main {
     padding: 2rem 0rem;
@@ -34,4 +32,10 @@ export const CarListStyled = styled.main`
       margin-bottom: 1rem;
     }
   }
+`
+
+export const CarListContainer = styled.section`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 `

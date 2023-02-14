@@ -16,7 +16,7 @@ const Home: React.FC = () => {
           simples e fácil
         </H1>
         <p>Vários modelos para você dirigir seguro, com conforto e segurança</p>
-        <NavLink to="/listagem">
+        <NavLink to="/app/listagem">
           <Button>Começar agora</Button>
         </NavLink>
       </Col>

@@ -27,16 +27,12 @@ export const Aside = styled.aside`
     div {
       display: flex;
       padding: 1rem 0px;
-      width: 5rem;
+      width: 4.75rem;
       justify-content: center;
       cursor: pointer;
       &:hover {
         background: #000;
       }
-    }
-
-    div.active {
-      width: calc(5rem - 4px);
     }
 
     .active {

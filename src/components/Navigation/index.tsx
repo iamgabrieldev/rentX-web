@@ -13,17 +13,17 @@ const Navigation: React.FC = () => {
         <img src={UnionSvg} alt="" />
       </header>
       <main>
-        <NavLink to="/listagem">
-          <div className="active">
+        <NavLink to="/app/listagem">
+          <div>
             <img src={HomeSvg} alt="" />
           </div>
         </NavLink>
-        <NavLink to="/filtro">
+        <NavLink to="/app/filtro">
           <div>
             <img src={CarSvg} alt="" />
           </div>
         </NavLink>
-        <NavLink to="/login">
+        <NavLink to="/app/login">
           <div>
             <img src={UserSvg} alt="" />
           </div>

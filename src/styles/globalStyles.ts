@@ -4,13 +4,14 @@ const GlobalStyles = createGlobalStyle`
   html,
   body {
     color: ${({ theme }) => theme.font.colors.pure};
+    background: ${({ theme }) => theme.colors.background};
     padding: 0;
     margin: 0;
     font-family: Inter, sans-serif;
     font-size: 16px
   }
 
-  h1 {
+  h1, h2 {
     font-family: Archivo, sans-serif;
   }
 
