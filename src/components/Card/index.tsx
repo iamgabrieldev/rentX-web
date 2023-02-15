@@ -11,7 +11,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ carModel, carName, carPrice, pathImage }) => {
   return (
-    <CardStyled>
+    <CardStyled data-testid="car-card">
       <img src={pathImage} alt="" />
       <div className="div-line">
         <div className="father">

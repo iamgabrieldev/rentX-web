@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { CarListStyled } from './styles'
+import { CarListStyled, CarListContainer } from './styles'
 import { Card } from '../../components'
 
-import AudiImg from '../../assets/Audi.png'
-import CorveteImg from '../../assets/Corvete Z06.png'
-import PorcheImg from '../../assets/Porche.png'
 import { api } from '../../services/api'
 
 interface CarsProps {
@@ -44,7 +41,7 @@ const CarList: React.FC = () => {
           <span>Total 12 de carros</span>
         </div>
       </main>
-      <div style={{ display: 'flex' }}>{renderProductListOrMessage()}</div>
+      <CarListContainer>{renderProductListOrMessage()}</CarListContainer>
     </CarListStyled>
   )
 }

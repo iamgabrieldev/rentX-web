@@ -1,12 +1,12 @@
-import "styled-components";
+import 'styled-components'
 
-import { lightTheme } from "../styles/themes/light";
+import { dark } from '../styles/themes/dark'
 
 // CRIANDO TIPAGEM DO NOSSO TEMA DE FORMA DINÂMICA
-type ThemeType = typeof lightTheme;
+type ThemeType = typeof dark
 
 // SOBRESCREVENDO O MODULO DE TIPAGENS DEFAULT DO STYLE-COMPONENTS
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme extends ThemeType {}
 }

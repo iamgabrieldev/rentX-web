@@ -39,7 +39,7 @@ export const CardStyled = styled.div`
       content: '';
       display: block;
       height: 2px;
-      background: ${({ theme }) => theme.colors.light[1]};
+      background: #fff;
     }
 
     svg {
