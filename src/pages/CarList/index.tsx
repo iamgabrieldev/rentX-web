@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { CarListStyled, CarListContainer, EmptyContainer } from './styles'
+import { CarListContainer, CarListStyled, EmptyContainer } from './styles'
 import { Card } from '../../components'
 
 import { api } from '../../services/api'
@@ -42,7 +42,7 @@ const CarList: React.FC = () => {
         console.log(response.data)
         console.log(loading)
       })
-      .catch((err) => console.log(err))
+      .catch((err) => { console.log(err) });
   }, [])
 
   return (

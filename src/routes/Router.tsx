@@ -1,5 +1,5 @@
-import { FC } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { type FC } from 'react'
+import { Route, Routes } from 'react-router-dom'
 import { CarFilter, CarList, CarUnique, Home, SignIn } from '../pages'
 import DefaultLayout from '../layout/DefaultLayout'
 

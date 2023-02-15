@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { type ReactNode } from 'react'
 import GlobalStyles from './globalStyles'
 import { ThemeProvider } from 'styled-components'
 import { dark } from './themes/dark'

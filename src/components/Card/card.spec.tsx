@@ -1,4 +1,4 @@
-import { screen, render, fireEvent } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import Card from './index'
 
 const car = {
@@ -7,7 +7,7 @@ const car = {
   model: 'Audi',
   price: 150,
   urlImage: 'https://raw.githubusercontent.com/iamgabrieldev/rentX-images/main/Audi.png',
-  icon: 'energy',
+  icon: 'energy'
 }
 
 const renderCarCard = () => {
@@ -19,5 +19,5 @@ describe('Card', () => {
     renderCarCard()
 
     expect(screen.getByTestId('car-card')).toBeInTheDocument()
-  })
+  });
 })

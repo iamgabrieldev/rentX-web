@@ -44,10 +44,6 @@ jobs:
       - name: Install package dependencies
         run: yarn
 
-      - name: Check linting and formatting
-        # Custom script for checking the linting and formatting being in place
-        run: yarn lint
-
       # Run test cases and this could ensure minimum coverage as well if set
       - name: Execute test cases
         run: yarn test

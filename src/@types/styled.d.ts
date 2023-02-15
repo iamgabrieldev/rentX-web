@@ -1,6 +1,6 @@
 import 'styled-components'
 
-import { dark } from '../styles/themes/dark'
+import { type dark } from '../styles/themes/dark'
 
 // CRIANDO TIPAGEM DO NOSSO TEMA DE FORMA DINÂMICA
 type ThemeType = typeof dark
