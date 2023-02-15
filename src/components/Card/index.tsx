@@ -4,7 +4,7 @@ import { CardStyled } from './styles'
 
 interface CardProps {
   carModel: string
-  carPrice: number
+  carPrice: string
   carName: string
   pathImage: any
 }
@@ -12,7 +12,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ carModel, carName, carPrice, pathImage }) => {
   return (
     <CardStyled data-testid="car-card">
-      <img src={pathImage} alt="" />
+      <img data-testid="image" src={pathImage} alt="" />
       <div className="div-line">
         <div className="father">
           <div>
