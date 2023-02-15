@@ -5,7 +5,7 @@ const car = {
   id: 1,
   name: 'RS 5 Coupe',
   model: 'Audi',
-  price: 150,
+  price: '150',
   urlImage: 'https://raw.githubusercontent.com/iamgabrieldev/rentX-images/main/Audi.png',
   icon: 'energy',
 }
@@ -19,5 +19,16 @@ describe('Card', () => {
     renderCarCard()
 
     expect(screen.getByTestId('car-card')).toBeInTheDocument()
+  })
+
+  it('deve exibiir o contéudo adequado', () => {
+    renderCarCard()
+
+    expect(screen.getByText(new RegExp(car.name, 'i'))).toBeInTheDocument()
+    expect(screen.getByText(new RegExp(car.model, 'i'))).toBeInTheDocument()
+    expect(screen.getByText(new RegExp(car.price, 'i'))).toBeInTheDocument()
+    expect(screen.getByTestId('image')).toHaveStyle({
+      backgroundImage: car.urlImage,
+    })
   })
 })

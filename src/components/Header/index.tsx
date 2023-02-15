@@ -6,7 +6,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title }) => {
   return (
-    <HeaderStyled>
+    <HeaderStyled data-testid="header">
       <h2>{title}</h2>
       <div>
         <span>Faça Login</span>
