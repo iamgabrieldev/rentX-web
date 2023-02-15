@@ -10,14 +10,14 @@ const car = {
   icon: 'energy',
 }
 
-const addToCart = jest.fn()
-
 const renderCarCard = () => {
   render(<Card id={car.id} name={car.name} model={car.model} price={car.price} urlImage={car.urlImage} icon={car.icon} />)
 }
 
 describe('Card', () => {
-  it('deve rendizar Card()', () => {
-    renderCarCard
+  it('deve renderizar Card()', () => {
+    renderCarCard()
+
+    expect(screen.getByTestId('car-card')).toBeInTheDocument()
   })
 })

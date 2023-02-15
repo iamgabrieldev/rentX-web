@@ -4,7 +4,7 @@ export const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.light.pure};
+  background-color: ${({ theme }) => theme.pure};
   width: calc(100vw - 5rem);
   height: 5.33rem;
   padding: 2rem 7.25rem;
@@ -25,7 +25,6 @@ export const HeaderStyled = styled.header`
       width: 3rem;
       height: 3rem;
       border-radius: 50%;
-      background-color: ${({ theme }) => theme.colors.light['3']};
     }
   }
 `

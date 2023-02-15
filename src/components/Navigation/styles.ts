@@ -37,7 +37,7 @@ export const Aside = styled.aside`
 
     .active {
       background: #000;
-      border-left: 4px solid ${({ theme }) => theme.colors.primary};
+      border-left: 4px solid red;
     }
   }
 `

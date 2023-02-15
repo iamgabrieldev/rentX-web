@@ -22,7 +22,7 @@ export const TabDatePicker = styled.div`
     }
 
     h2 {
-      color: ${({ theme }) => theme.colors.primary};
+      color: red;
       font-size: 2rem;
     }
   }
@@ -49,7 +49,7 @@ export const RowStyled = styled(Row)`
 `
 
 export const Container = styled.div`
-  background-color: ${({ theme }) => theme.colors.light.pure};
+  background-color: ${({ theme }) => theme.pure};
   height: 100vh;
 
   main {
@@ -100,7 +100,7 @@ export const Container = styled.div`
       text-transform: uppercase;
       font-size: 0.75rem;
       font-weight: bold;
-      color: ${({ theme }) => theme.font.colors[1]};
+      color: #333;
     }
 
     h2 {
@@ -109,7 +109,7 @@ export const Container = styled.div`
     }
 
     .price {
-      color: ${({ theme }) => theme.colors.primary};
+      color: red;
     }
   }
 `

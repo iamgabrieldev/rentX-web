@@ -3,8 +3,8 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyles = createGlobalStyle`
   html,
   body {
-    color: ${({ theme }) => theme.font.colors.pure};
-    background: ${({ theme }) => theme.colors.background};
+    color: #000;
+    background: ${({ theme }) => theme.background};
     padding: 0;
     margin: 0;
     font-family: Inter, sans-serif;
@@ -36,7 +36,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   #nprogress .bar {
-    background: ${({ theme }) => theme.colors.light.pure};
+    background: ${({ theme }) => theme.background};
   }
 
   #nprogress .spinner-icon {

@@ -3,27 +3,25 @@ import { AiOutlineThunderbolt } from 'react-icons/ai'
 import { CardStyled } from './styles'
 
 interface CardProps {
-  id: number
-  model: string
-  price: number
-  name: string
-  urlImage: any
-  icon: string
+  carModel: string
+  carPrice: number
+  carName: string
+  pathImage: any
 }
 
-const Card: React.FC<CardProps> = (car) => {
+const Card: React.FC<CardProps> = ({ carModel, carName, carPrice, pathImage }) => {
   return (
-    <CardStyled>
-      <img src={car.urlImage} alt="" />
+    <CardStyled data-testid="car-card">
+      <img src={pathImage} alt="" />
       <div className="div-line">
         <div className="father">
           <div>
-            <p>{car.model}</p>
-            <b>{car.name}</b>
+            <p>{carModel}</p>
+            <b>{carName}</b>
           </div>
           <div>
             <p>Ao dia</p>
-            <strong>R${car.price}</strong>
+            <strong>R${carPrice}</strong>
           </div>
           <AiOutlineThunderbolt />
         </div>
