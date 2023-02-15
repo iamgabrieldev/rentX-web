@@ -5,7 +5,7 @@ export const HeaderStyled = styled.header`
   justify-content: space-between;
   align-items: center;
   background-color: ${({ theme }) => theme.pure};
-  width: calc(100vw - 5rem);
+  width: calc(100vw - 0.2rem);
   height: 5.33rem;
   padding: 2rem 7.25rem;
 

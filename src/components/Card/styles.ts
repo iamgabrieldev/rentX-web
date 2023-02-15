@@ -2,9 +2,7 @@ import styled from 'styled-components'
 
 export const CardStyled = styled.div`
   background-color: #fff;
-  width: 22.5rem;
   border-radius: 4px;
-  margin-right: 1rem;
 
   img {
     padding: 2.5rem 3rem;
@@ -39,7 +37,7 @@ export const CardStyled = styled.div`
       content: '';
       display: block;
       height: 2px;
-      background: #fff;
+      background: #e5e5e5;
     }
 
     svg {

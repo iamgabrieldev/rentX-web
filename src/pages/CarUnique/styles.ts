@@ -1,4 +1,3 @@
-import { Row } from 'antd'
 import styled from 'styled-components'
 
 export const TabDatePicker = styled.div`
@@ -28,7 +27,7 @@ export const TabDatePicker = styled.div`
   }
 `
 
-export const RowStyled = styled(Row)`
+export const IconContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;

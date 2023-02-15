@@ -1,54 +1,12 @@
 import { MdAltRoute, MdAvTimer, MdCarRepair, MdKeyboardArrowLeft, MdOutlineWaterDrop, MdPersonOutline, MdUpload } from 'react-icons/md'
-import { Container, RowStyled, TabDatePicker } from './styles'
+import { Container, IconContainer } from './styles'
 import { NavLink } from 'react-router-dom'
 import { Button, Navigation } from '../../components'
-import { Carousel, DatePicker, Tabs } from 'antd'
+import { Carousel } from 'antd'
 
 import CarImg from '../../assets/car-home.png'
 
 const CarUnique: React.FC = () => {
-  const formatList = ['DD/MM/YYYY', 'DD/MM/YY']
-
-  const items = [1, 2].map((_, i) => {
-    const id = String(i + 1)
-
-    if (id !== '2') {
-      return {
-        label: `SOBRE O CARRO`,
-        key: id,
-        children: (
-          <TabDatePicker>
-            <p>
-              Este é automóvel desportivo. Surgiu do lendário touro de lide indultado na praça Real Maestranza de Sevilla. É um belíssimo carro para quem gosta
-              de acelerar.
-            </p>
-          </TabDatePicker>
-        ),
-      }
-    }
-
-    return {
-      label: `PERÍODO`,
-      key: id,
-      children: (
-        <TabDatePicker>
-          <div>
-            <DatePicker format={formatList} placeholder="De" />
-            <DatePicker format={formatList} placeholder="Até" />
-          </div>
-          <hr />
-          <div>
-            <span>
-              <label htmlFor="">Total</label>
-              <p>R$580 x3 diárias</p>
-            </span>
-            <h2>R$ 2.900</h2>
-          </div>
-        </TabDatePicker>
-      ),
-    }
-  })
-
   return (
     <>
       <div>
@@ -82,45 +40,42 @@ const CarUnique: React.FC = () => {
           </Carousel>
           <section>
             <div className="container">
-              <RowStyled align="middle" style={{ display: 'flex', alignItems: 'center' }}>
+              <IconContainer>
                 <MdAvTimer />
                 <span>
                   <p>270km/h</p>
                 </span>
-              </RowStyled>
-              <RowStyled>
+              </IconContainer>
+              <IconContainer>
                 <MdUpload />
                 <span>
                   <p>6.8s</p>
                 </span>
-              </RowStyled>
-              <RowStyled>
+              </IconContainer>
+              <IconContainer>
                 <MdOutlineWaterDrop />
                 <span>
                   <p>Gasolina</p>
                 </span>
-              </RowStyled>
-              <RowStyled>
+              </IconContainer>
+              <IconContainer>
                 <MdAltRoute />
                 <span>
                   <p>Auto</p>
                 </span>
-              </RowStyled>
-              <RowStyled>
+              </IconContainer>
+              <IconContainer>
                 <MdPersonOutline />
                 <span>5pessoas</span>
-              </RowStyled>
-              <RowStyled>
+              </IconContainer>
+              <IconContainer>
                 <MdCarRepair />
                 <span>
                   <p>280HP</p>
                 </span>
-              </RowStyled>
+              </IconContainer>
             </div>
             <div>
-              <div style={{ marginBottom: '4rem' }}>
-                <Tabs size="small" type="line" moreIcon={false} items={items} />
-              </div>
               <Button>Escolher período de aluguel</Button>
             </div>
           </section>
