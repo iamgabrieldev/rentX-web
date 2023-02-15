@@ -10,14 +10,13 @@ interface CarsProps {
   id: number
   name: string
   model: string
-  price: number
+  price: string
   urlImage: string
   icon: string
 }
 
 const CarList: React.FC = () => {
   const [cars, setCars] = useState<CarsProps[]>([])
-  const [loading, setLoading] = useState(false)
 
   const renderProductListOrMessage = () => {
     if (cars.length === 0) {
@@ -40,9 +39,10 @@ const CarList: React.FC = () => {
       .then((response) => {
         setCars((state) => response.data)
         console.log(response.data)
-        console.log(loading)
       })
-      .catch((err) => { console.log(err) });
+      .catch((err) => {
+        console.log(err)
+      })
   }, [])
 
   return (
