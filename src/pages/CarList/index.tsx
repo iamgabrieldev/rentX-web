@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { CarListStyled, CarListContainer } from './styles'
+import { CarListStyled, CarListContainer, EmptyContainer } from './styles'
 import { Card } from '../../components'
 
 import { api } from '../../services/api'
+
+import EmptySvg from '../../assets/empty.svg'
 
 interface CarsProps {
   id: number
@@ -15,11 +17,20 @@ interface CarsProps {
 
 const CarList: React.FC = () => {
   const [cars, setCars] = useState<CarsProps[]>([])
+  const [loading, setLoading] = useState(false)
 
   const renderProductListOrMessage = () => {
     if (cars.length === 0) {
-      return <h2>No products</h2>
+      return (
+        <EmptyContainer>
+          <h2>😬 Sem carros disponíveis</h2>
+          <div>
+            <img src={EmptySvg} alt="" />
+          </div>
+        </EmptyContainer>
+      )
     }
+
     return cars.map((car) => <Card key={car.id} carName={car.name} carModel={car.model} carPrice={car.price} pathImage={car.urlImage} />)
   }
 
@@ -29,6 +40,7 @@ const CarList: React.FC = () => {
       .then((response) => {
         setCars((state) => response.data)
         console.log(response.data)
+        console.log(loading)
       })
       .catch((err) => console.log(err))
   }, [])

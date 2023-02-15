@@ -11,7 +11,7 @@ const car = {
 }
 
 const renderCarCard = () => {
-  render(<Card id={car.id} name={car.name} model={car.model} price={car.price} urlImage={car.urlImage} icon={car.icon} />)
+  render(<Card carName={car.name} carModel={car.model} carPrice={car.price} pathImage={car.urlImage} key={car.id} />)
 }
 
 describe('Card', () => {

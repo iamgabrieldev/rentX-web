@@ -1,15 +1,16 @@
-import { Col, Image } from 'antd'
-import { H1, RowStyled } from './styles'
-import { Button } from '../../components'
-import LogoSvg from '../../assets/Logotipo.png'
-import CarPng from '../../assets/car-img.png'
 import { NavLink } from 'react-router-dom'
+
+import { H1, HomeContainer } from './styles'
+import { Button } from '../../components'
+
+import CarPng from '../../assets/car-img.png'
+import LogoSvg from '../../assets/Logotipo.png'
 
 const Home: React.FC = () => {
   return (
-    <RowStyled>
-      <Col span={12}>
-        <Image src={LogoSvg} preview={false} />
+    <HomeContainer>
+      <div>
+        <img src={LogoSvg} alt="" />
         <H1>
           Alugue um <br />
           carro de maneira <br />
@@ -19,11 +20,11 @@ const Home: React.FC = () => {
         <NavLink to="/app/listagem">
           <Button>Começar agora</Button>
         </NavLink>
-      </Col>
-      <Col>
-        <Image src={CarPng} preview={false} />
-      </Col>
-    </RowStyled>
+      </div>
+      <div>
+        <img src={CarPng} />
+      </div>
+    </HomeContainer>
   )
 }
 

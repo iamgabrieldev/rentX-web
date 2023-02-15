@@ -1,7 +1,6 @@
-import { Row } from 'antd'
 import styled from 'styled-components'
 
-export const RowStyled = styled(Row)`
+export const HomeContainer = styled.main`
   background-color: #1b1b1b;
   height: 100vh;
   justify-content: space-evenly;
