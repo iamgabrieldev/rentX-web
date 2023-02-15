@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const CarListStyled = styled.main`
   height: calc(100vh - 302px);
-  padding: 1rem 6rem 1rem 7.25rem;
 
   main {
     padding: 2rem 0rem;
