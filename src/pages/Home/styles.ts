@@ -12,13 +12,13 @@ export const HomeContainer = styled.main`
     font-size: 1.25rem;
     width: 360px;
     line-height: 1.5;
-    color: ${({ theme }) => theme.pure};
+    color: ${({ theme }) => theme.colors.white};
     margin-bottom: 4rem;
   }
 `
 
 export const H1 = styled.h1`
-  color: ${({ theme }) => theme.pure};
+  color: ${({ theme }) => theme.colors.white};
   font-size: 3.5rem;
   margin: 7.5rem 0rem 2rem 0rem;
 `

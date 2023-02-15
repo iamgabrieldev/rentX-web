@@ -4,7 +4,7 @@ const GlobalStyles = createGlobalStyle`
   html,
   body {
     color: #000;
-    background: ${({ theme }) => theme.background};
+    background: ${({ theme }) => theme.colors['gray-100']};
     padding: 0;
     margin: 0;
     font-family: Inter, sans-serif;
@@ -36,7 +36,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   #nprogress .bar {
-    background: ${({ theme }) => theme.background};
+    background: ${({ theme }) => theme.colors['gray-100']};
   }
 
   #nprogress .spinner-icon {

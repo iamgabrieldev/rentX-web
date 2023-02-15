@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const CardStyled = styled.div`
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 4px;
 
   img {

@@ -17,7 +17,7 @@ export const CarListStyled = styled.main`
         display: block;
         width: calc(100vw - 12.25rem);
         height: 3px;
-        background: #dedee3;
+        background: ${({ theme }) => theme.colors['gray-400']};
         margin: 1.5rem 0rem 0rem;
         border-radius: 2px;
       }

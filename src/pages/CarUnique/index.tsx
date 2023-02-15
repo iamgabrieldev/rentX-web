@@ -1,8 +1,9 @@
-import { MdAltRoute, MdAvTimer, MdCarRepair, MdKeyboardArrowLeft, MdOutlineWaterDrop, MdPersonOutline, MdUpload } from 'react-icons/md'
-import { Container, IconContainer } from './styles'
 import { NavLink } from 'react-router-dom'
-import { Button, Navigation } from '../../components'
 import { Carousel } from 'antd'
+import { MdAltRoute, MdAvTimer, MdCarRepair, MdKeyboardArrowLeft, MdOutlineWaterDrop, MdPersonOutline, MdUpload } from 'react-icons/md'
+
+import { Container, IconContainer, InfoContainer, HeaderContainer, ContentContainer } from './styles'
+import { Button, Navigation } from '../../components'
 
 import CarImg from '../../assets/car-home.png'
 
@@ -13,7 +14,7 @@ const CarUnique: React.FC = () => {
         <Navigation />
       </div>
       <Container>
-        <header>
+        <HeaderContainer>
           <NavLink to="/app/listagem">
             <MdKeyboardArrowLeft size={36} />
           </NavLink>
@@ -25,8 +26,8 @@ const CarUnique: React.FC = () => {
             <p>Ao dia</p>
             <h2 className="price">R$120</h2>
           </div>
-        </header>
-        <main>
+        </HeaderContainer>
+        <ContentContainer>
           <Carousel dotPosition="bottom" dots={true} autoplay>
             <div>
               <img src={CarImg} alt="" />
@@ -38,10 +39,10 @@ const CarUnique: React.FC = () => {
               <img src={CarImg} alt="" />
             </div>
           </Carousel>
-          <section>
+          <InfoContainer>
             <div className="container">
               <IconContainer>
-                <MdAvTimer />
+                <MdAvTimer size={24} />
                 <span>
                   <p>270km/h</p>
                 </span>
@@ -66,7 +67,7 @@ const CarUnique: React.FC = () => {
               </IconContainer>
               <IconContainer>
                 <MdPersonOutline />
-                <span>5pessoas</span>
+                <span>5 pessoas</span>
               </IconContainer>
               <IconContainer>
                 <MdCarRepair />
@@ -78,8 +79,8 @@ const CarUnique: React.FC = () => {
             <div>
               <Button>Escolher período de aluguel</Button>
             </div>
-          </section>
-        </main>
+          </InfoContainer>
+        </ContentContainer>
       </Container>
     </>
   )
