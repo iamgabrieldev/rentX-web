@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom'
 
-import { NavigationContainer } from './styles'
+import { NavigationContainer, OutletContainer } from './styles'
 import { Header, Navigation } from '../components'
 
 const DefaultLayout: React.FC = () => {
@@ -12,9 +12,9 @@ const DefaultLayout: React.FC = () => {
         </div>
         <Navigation />
       </NavigationContainer>
-      <div>
+      <OutletContainer>
         <Outlet />
-      </div>
+      </OutletContainer>
     </>
   )
 }
