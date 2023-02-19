@@ -2,11 +2,11 @@ import React, { type ButtonHTMLAttributes } from 'react'
 import { ButtonStyled } from './styles'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode
+  variant: string
 }
 
-const Button: React.FC<ButtonProps> = ({ children }) => {
-  return <ButtonStyled>{children}</ButtonStyled>
+const Button: React.FC<ButtonProps> = (props) => {
+  return <ButtonStyled {...props} className={props.variant} />
 }
 
 export default Button
