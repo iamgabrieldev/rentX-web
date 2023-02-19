@@ -1,6 +1,17 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration:none;
+    color: #000;
+  }
+
   html,
   body {
     color: #000;
@@ -15,9 +26,13 @@ const GlobalStyles = createGlobalStyle`
     font-family: Archivo, sans-serif;
   }
 
-  a {
-    color: inherit;
-    text-decoration: none;
+  :focus{
+    outline: 0;
+    box-shadow: 0 0 0 2px ${(props) => props.theme.colors.primary}
+  }
+
+  input {
+    border:0;
   }
   
   p, button {
@@ -27,23 +42,15 @@ const GlobalStyles = createGlobalStyle`
   button {
     border: none;
     cursor: pointer
+
+    &::focus {
+      color: red;
+    }
   }
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
 
-  #nprogress .bar {
-    background: ${({ theme }) => theme.colors['gray-100']};
-  }
 
-  #nprogress .spinner-icon {
-    width: 25px;
-    height: 25px;
-    border: solid 3px transparent;
-  }
+ */
 `
 
 export default GlobalStyles

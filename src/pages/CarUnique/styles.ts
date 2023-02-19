@@ -1,32 +1,5 @@
 import styled from 'styled-components'
 
-export const TabDatePicker = styled.div`
-  p {
-    max-width: 480px;
-    line-height: 1.5;
-    font-size: 1rem;
-    opacity: 0.8;
-  }
-
-  div {
-    display: flex;
-    gap: 1rem;
-    margin: 0.5rem 0rem 0.5rem 0rem;
-    justify-content: space-between;
-
-    label {
-      text-transform: uppercase;
-      font-size: 0.75rem;
-      color: #aeaeb3;
-    }
-
-    h2 {
-      color: red;
-      font-size: 2rem;
-    }
-  }
-`
-
 export const IconContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -63,19 +36,20 @@ export const HeaderContainer = styled.header`
   width: 80%;
 
   p {
+    font-family: 'Archivo';
     text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: bold;
-    color: #333;
+    color: ${({ theme }) => theme.colors['gray-300']};
   }
 
   h2 {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
   .price {
-    color: red;
+    color: ${({ theme }) => theme.colors.primary};
   }
 `
 

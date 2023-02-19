@@ -30,7 +30,7 @@ const CarList: React.FC = () => {
       )
     }
 
-    return cars.map((car) => <Card key={car.id} carName={car.name} carModel={car.model} carPrice={car.price} pathImage={car.urlImage} />)
+    return cars.map((car) => <Card key={car.id} carId={car.id} carName={car.name} carModel={car.model} carPrice={car.price} pathImage={car.urlImage} />)
   }
 
   useEffect(() => {

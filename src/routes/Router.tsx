@@ -12,7 +12,7 @@ const Router: FC = () => {
         <Route path="/app/filtro" element={<CarFilter />} />
         <Route path="/app/login" element={<SignIn />} />
       </Route>
-      <Route path="/app/listagem/unique/:id" element={<CarUnique />} />
+      <Route path="/app/listagem/:id" element={<CarUnique />} />
     </Routes>
   )
 }
