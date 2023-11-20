@@ -14,7 +14,7 @@ const Home: React.FC = () => {
         <H1>
           Alugue um <br />
           carro de maneira <br />
-          simples e fácil
+          simples e fácil!
         </H1>
         <p>Vários modelos para você dirigir seguro, com conforto e segurança</p>
         <NavLink to="/app/listagem">
